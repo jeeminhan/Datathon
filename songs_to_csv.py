@@ -15,6 +15,7 @@ def print_song(title, artist, year, rank):
     print("Year:\t", year)
     print("Rank:\t", rank)
 
+# Get all song params in 2D array
 def get_songs():
     song_table = []
     for year in YEARS:
@@ -41,6 +42,7 @@ def get_songs():
     
     return song_table
 
+# Write data to csv file
 def write_to_csv():
     col_names = ['Title', 'Artist', 'Year', 'Rank']
     song_table = get_songs()
