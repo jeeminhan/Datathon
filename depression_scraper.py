@@ -6,7 +6,7 @@ alpha = ['D','E','F','G','H','I','J']
 cols = ['Year','Lack of interest','Down, depressed', 'Trouble sleeping',\
   'Lathargic', 'Poor appetite', 'Feeling bad about self',\
   'Trouble concentrating', 'moving or speaking slowly or too fast',
-  'Better off dead', 'difficulty problem caused']
+  'Better off dead', 'difficulty problem caused','average']
 
 def yearly(link,year):
   r = requests.get(link)
@@ -21,10 +21,8 @@ def yearly(link,year):
     actual_table = tables[2:]
   temp = []
   temp.append(year+1)
-
-
+  
   for answer in actual_table:
-    # temp.append(answer.find('table', attrs = {'class':'Values'}.find_all('tr')[4]))
     responses = answer.find('table', attrs = {'class':'values'})
     try:
       fourth = responses.find("tbody").find_all("tr")[3]
@@ -34,6 +32,9 @@ def yearly(link,year):
       temp.append(int(value)/int(total))
     except:
       pass
+  other_vals = temp[1:]
+  avg = sum(other_vals)/len(other_vals)
+  temp.append(avg)
 
   return temp
 
