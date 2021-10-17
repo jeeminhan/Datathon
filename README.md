@@ -16,12 +16,16 @@ Our appriach to the problem was multi-faceted. When we first started our problem
 
 
 Most commonly used words in the 25 most "negative" songs
+
 ![image](https://user-images.githubusercontent.com/72060730/137617413-6b4e9681-336a-4daa-9647-edc77a9fd44a.png)
 
 Most commonly used words in the 25 most "positive" songs
+
 ![image](https://user-images.githubusercontent.com/72060730/137617451-14684a34-db92-45f0-9bff-3751a38eb745.png)
 
 
 
 Bonus star
+
+
 ![image](https://user-images.githubusercontent.com/72060730/137617470-ec425abc-802d-406d-9688-de485173b69e.png)
