@@ -1,54 +1,51 @@
 import pandas as pd
-import time
-import os
-import azapi # https://github.com/elmoiv/azapi
+import lyricsgenius
+
+GENIUS_ACCESS_TOKEN="hnCMgtuIHBu51UGj7VbNiFH12olQqp6_cNCmNGw1IX4w8QRyzfw1FQNBYygXtcn4"
+
+def cleanLyrics(lyrics):
+    index = lyrics.find('URLCopyEmbedCopy')
+    while (index != -1):
+        index = lyrics.find('URLCopyEmbedCopy') - 11
+        i = 1
+        num = lyrics[index - i]
+        while num.isnumeric():
+            i += 1
+            num = lyrics[index - i]
+
+        start = index - i + 1
+        end = index + 27
+
+        lyrics = lyrics[:start] + lyrics[end:]
+        index = lyrics.find('URLCopyEmbedCopy')
+    
+    return lyrics
 
 
 def main():
-    API = azapi.AZlyrics('google', accuracy=0.5)
+    genius = lyricsgenius.Genius(GENIUS_ACCESS_TOKEN)
+
     songs_list = pd.read_csv('songs.csv')
-    azlyrics_names = open("AZLyrics_Names.txt", "w")
-
     count = 0
-    song_num = 0
 
-    # Iterate for each row in csv file
     for index, row in songs_list.iterrows():
-        if count < 60:
-            count += 1
-            print("Skipped " + count)
-            continue
+        song_name = row[0]
+        artist_name = row[1]
 
-        # Get song title and artist from AZLyrics
-        API.title = row[0]
-        API.artist = row[1]
+        song = genius.search_song(song_name, artist_name)
+        try:
+            lyrics = cleanLyrics(song.lyrics)
+            file_name = str(row[2]) + "-" + str(row[3]) + "_" + row[0] + "--" + row[1] + ".txt"
+            song_file = open(file_name, "w")
+            song_file.write(lyrics)
+            song_file.close()
+        except:
+            print("Didn't work")
 
-        # Get song lyrics
-        API.getLyrics()
-
-        # Write lyrics to file
-        file_name = str(row[2]) + "-" + str(row[3]) + "_" + row[0] + "--" + row[1] + ".txt"
-        song_file = open(file_name, "w")
-        song_file.write(API.lyrics)
-        song_file.close()
-
-
-        # Save AZLyrics song title and artist
-        song_info = str(row[2]) + "-" + str(row[3]) + "_" + API.title + "--" + API.artist + '\n'
-        azlyrics_names.write(song_info)
-
-        # Wait 7 seconds every 10 calls
-        if count == 10:
-            time.sleep(10)
-            count = 0
-        else:
-            count += 1
-
+        
         # Log program progress
-        song_num += 1
-        percent = song_num //4
-        print("Completed song", song_num, "out of 400\t>> ", percent, "% done")
-    
-    azlyrics_names.close()
+        count += 1
+        percent = count //4
+        print("Completed song", count, "out of 400\t>> ", percent, "% done")
 
 main()
