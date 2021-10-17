@@ -13,23 +13,23 @@ What would your team do differently if you were given more than 24 hours?
 
 
 ## Our approach
-Our appriach to the problem was multi-faceted. When we first started our problem we tried to approach things in a top down fashion, by having some idea of what the data would look like and creating our models based on thhat. We realized as we kept going that a lot of what we had in mind wasn't working out. We expected to find certain things in the data but it was hard for us to find those correlations in the data. That's why we turned to a more bottom-up approached where collecting data became our top priority.
+Our approach to the problem was multi-faceted. When we first started our problem we tried to approach things in a top-down fashion, by having some idea of what the data would look like and creating our models based on that. We realized as we kept going that a lot of what we had in mind wasn't working out. We expected to find certain things in the data but it was hard for us to find those correlations in the data. That's why we turned to a more bottom-up approach where collecting data became our top priority.
 
-The first data we scraped was the depression dataset which came from the CDC (https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2007). We used Python's BeautifulSoup and Requests libraries. Data collected was the proportion of all respondants that chose the option of "Several days", "More than half of the days", and Nearly evey day". 
+The first data we scraped was the depression dataset which came from the CDC (https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/default.aspx?BeginYear=2007). We used Python's BeautifulSoup and Requests libraries. Data collected was the proportion of all respondents that chose the option of "Several days", "More than half of the days", and Nearly every day". 
 
 The same process was used to collect data on drug use in the United States. 
 
-Data about songs was collected in multiple different places but eventually cleaned and aggregated together. The top 50 songs of the year was found from Billboard's top 100 list. Taking the artist and title of the song, the genius API was employed to return the lyrics for each song. This data was manipulated through NLTK's sentiment analysis to determine the positive, negative, neutral, and compound values. Finally, the Spotify Web API was used to determine more attributes of the top songs of each year. 
+Data about songs were collected in multiple different places but eventually cleaned and aggregated together. The top songs of the year were found from Billboard's top 100 list. Taking the artist and title of the song, the genius API was employed to return the lyrics for each song. This data was manipulated through NLTK's sentiment analysis to determine the positive, negative, neutral, and compound values. Finally, the Spotify Web API was used to determine more attributes of the top songs of each year. 
 
 
 ## Analysis
-The main idea of the project was to see if popular song's and their possible message would affect the general population's mental health. The average depression rate was compared to the average positive and negative sentiment rating on top songs.
+The main idea of the project was to see if popular songs and their possible message would affect the general population's mental health. The average depression rate was compared to the average positive and negative sentiment rating on top songs.
 
 ### Depression vs Song
 
 ![image](https://user-images.githubusercontent.com/72060730/137621202-66802374-b25f-4cb5-bf79-73cc67ec8ed0.png)
 
-Although, nothing is conclusive, there may be some correation between depression and positive songs. One hypothesis our group establised was that as people were stuggling more with their mental health (2008), they turned to happier music which raised the overall score (as seen in 2010). 
+Although nothing is conclusive, there may be some correlation between depression and positive songs. One hypothesis our group established was that as people were struggling more with their mental health (2008), they turned to happier music which raised the overall score (as seen in 2010). 
 
 
 
@@ -38,29 +38,31 @@ Although, nothing is conclusive, there may be some correation between depression
 
 ### Drug usage vs song
 
-A similar compairison was made with drug usage as well. However, there is not much correlation found between drug usage and song sentiment. 
+A similar comparison was made with drug usage as well. However, there is not much correlation found between drug usage and song sentiment. 
 
 ![image](https://user-images.githubusercontent.com/72060730/137621126-f4fb3e47-a24e-4103-a145-af7d2585eafa.png)
 
 
 ### Regression Model
 
-With the data collected from the spotify API, we wanted to see if different factors (such as tempo, energy, key) would also have a direct relationship with negative sentiment. A regression model was created. The model was split 0.67-0.33 training/testing and had a root mean squared error of 0.0036. The result of the prediction is shown below
+With the data collected from the Spotify API, we wanted to see if different factors (such as tempo, energy, key) would also have a direct relationship with negative sentiment. A regression model was created. The model was split 0.67-0.33 training/testing and had a root mean squared error of 0.0036. The result of the prediction is shown below
 
 ![image](https://user-images.githubusercontent.com/72060730/137621145-caa1177c-6bfb-499c-a4c6-10d11f3575e2.png)
 
 
 ### Word Clouds
-Most commonly used words in the 25 most "negative" songs are:
+The most commonly used words in the 25 most "negative" songs are:
 
 ![image](https://user-images.githubusercontent.com/72060730/137620645-2f4d5d47-69a2-4393-846d-d131b3229c68.png)
 
 *A profanity filter had to be run as profane words were heavily used
 
 
-Most commonly used words in the 25 most "positive" songs are"
+The most commonly used words in the 25 most "positive" songs are:
 
 ![image](https://user-images.githubusercontent.com/72060730/137621983-522b5bfc-0d33-474d-8dcf-7395dd8b90d0.png)
+
+These word clouds helped us understand better specific words that were the most influential on sentiment. 
 
 ### Yearly Trends
 Additionally, we were able to look at the trend of the percentage of positive, negative, and neutral tendencies of songs per year.
@@ -81,6 +83,8 @@ Additionally, we were able to look at the trend of the percentage of positive, n
 
 ![image](https://user-images.githubusercontent.com/72060730/137620701-7519db31-36b6-45e6-9e51-e93754a37d93.png)
 
+
+The sporadic nature of the graphs made it hard to really analyze trends. This is possibly due to the fact that humans are so different that their song choice will not always go by a pattern. Our moods/weather/time of day plays a big role in what kind of music we listen to. 
 
 
 ## Reflection
