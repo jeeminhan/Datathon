@@ -14,8 +14,8 @@ Data about songs were collected in multiple different places but eventually clea
 ## Description of Data Collected
 
  * [Master-Song-Dataset.csv](https://github.com/jeeminhan/MuSentiment/blob/main/Master_Song_Dataset.csv) - Collection of Billboard Songs, Lyrics, Spotify Features, and Sentiment Analysis
- * [depression-data.csv](https://github.com/jeeminhan/MuSentiment/blob/main/depression_data.csv) - 
- * [drug_datacsv.csv](https://github.com/jeeminhan/MuSentiment/blob/main/drug_datacsv.csv) - 
+ * [depression-data.csv](https://github.com/jeeminhan/MuSentiment/blob/main/depression_data.csv) - Data collected about depression from the CDC
+ * [drug_datacsv.csv](https://github.com/jeeminhan/MuSentiment/blob/main/drug_datacsv.csv) - Data collected about drug usage from the CDC
  * [Lyrics](https://github.com/jeeminhan/MuSentiment/tree/main/Lyrics) - Lyrics collected into individual textfiles for each song
 
 ## Analysis
