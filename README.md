@@ -22,12 +22,23 @@ Data about songs was collected in multiple different places but eventually clean
 
 Here are some of the things that we learned through our data:
 Most commonly used words in the 25 most "negative" songs
-
-![image](https://user-images.githubusercontent.com/72060730/137617413-6b4e9681-336a-4daa-9647-edc77a9fd44a.png)
+![image](https://user-images.githubusercontent.com/72060730/137620645-2f4d5d47-69a2-4393-846d-d131b3229c68.png)
 
 Most commonly used words in the 25 most "positive" songs
 
-![image](https://user-images.githubusercontent.com/72060730/137617451-14684a34-db92-45f0-9bff-3751a38eb745.png)
+![image](https://user-images.githubusercontent.com/72060730/137620654-21d91a86-58eb-47c6-9c09-586a0c747521.png)
+
+
+Additionally, we were able to look at the trend of the percentage of positive, negative, and neutral tendneice sof songs per year.
+
+![image](https://user-images.githubusercontent.com/72060730/137620684-f21e7832-9edf-418f-b4bb-26e41006f7b4.png)
+![image](https://user-images.githubusercontent.com/72060730/137620690-7d447b37-8080-4c39-930f-a8df44fce3e7.png)
+![image](https://user-images.githubusercontent.com/72060730/137620692-d98aa578-c3ab-4aec-b46d-598bbca29f84.png)
+![image](https://user-images.githubusercontent.com/72060730/137620695-38e53ee8-2180-4e00-856f-76525fe3c884.png)
+![image](https://user-images.githubusercontent.com/72060730/137620696-43fa7c4b-9f53-4cfb-aa0b-2a70fef1c2b5.png)
+![image](https://user-images.githubusercontent.com/72060730/137620698-838060e9-8197-4375-a42f-a7953c0c2c39.png)
+![image](https://user-images.githubusercontent.com/72060730/137620700-a77db526-6ca0-4ce4-8c3e-421dc02c345c.png)
+![image](https://user-images.githubusercontent.com/72060730/137620701-7519db31-36b6-45e6-9e51-e93754a37d93.png)
 
 
 
