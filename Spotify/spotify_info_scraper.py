@@ -52,33 +52,48 @@ def getInfo():
     for index, row in songs_list.iterrows():
         query = row[0] + " " + row[1]
 
-        index = query.find("Featuring")
-        if index != -1:
-            query = query[:index]
+        try:
+            query.replace("$", "s")
 
-        index = query.lower().find(" x ")
-        if index != -1:
-            query = query[:index]
+            index = query.find(" Featuring ")
+            if index != -1:
+                query = query[:index]
 
-        result = sp.search(query, limit=1)
-        uri = result["tracks"]["items"][0]["uri"]
-        features = sp.audio_features(uri)[0]
+            index = query.lower().find(" x ")
+            if index != -1:
+                query = query[:index]
+
+            index = query.lower().find(" & ")
+            if index != -1:
+                query = query[:index]
+
+            index = query.lower().find(" with ")
+            if index != -1:
+                query = query[:index]
+
+            result = sp.search(query, limit=1)
+            uri = result["tracks"]["items"][0]["uri"]
+            features = sp.audio_features(uri)[0]
+            
+            song_info = [row[2],
+                        row[3],
+                        features["danceability"],
+                        features["energy"],
+                        features["key"],
+                        features["loudness"],
+                        features["mode"],
+                        features["speechiness"],
+                        features["acousticness"],
+                        features["instrumentalness"],
+                        features["liveness"],
+                        features["valence"],
+                        features["tempo"]]
+            
+            song_table.append(song_info)
         
-        song_info = [row[2],
-                    row[3],
-                    features["danceability"],
-                    features["energy"],
-                    features["key"],
-                    features["loudness"],
-                    features["mode"],
-                    features["speechiness"],
-                    features["acousticness"],
-                    features["instrumentalness"],
-                    features["liveness"],
-                    features["valence"],
-                    features["tempo"]]
-        
-        song_table.append(song_info)
+        except:
+            song_info = [-1 for i in range(13)]
+            song_table.append(song_info)
 
         count += 1
         print("Count: ", count)

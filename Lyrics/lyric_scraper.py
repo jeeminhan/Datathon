@@ -45,7 +45,7 @@ def main():
         
         # Log program progress
         count += 1
-        percent = count //4
-        print("Completed song", count, "out of 400\t>> ", percent, "% done")
+        percent = count * 100 // 1485
+        print("Completed song", count, "out of 1485\t>> ", percent, "% done")
 
 main()
