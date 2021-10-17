@@ -1,4 +1,4 @@
-# Datathon
+# MuSentiment
 ## Texas A&amp;M Datathon Repository
 
 
@@ -11,6 +11,12 @@ The same process was used to collect data on drug use in the United States.
 
 Data about songs were collected in multiple different places but eventually cleaned and aggregated together. The top songs of the year were found from Billboard's top 100 list. Taking the artist and title of the song, the genius API was employed to return the lyrics for each song. This data was manipulated through NLTK's sentiment analysis to determine the positive, negative, neutral, and compound values. Finally, the Spotify Web API was used to determine more attributes of the top songs of each year. 
 
+## Description of Data Collected
+
+ * [Master-Song-Dataset.csv](https://github.com/jeeminhan/MuSentiment/blob/main/Master_Song_Dataset.csv) - Collection of Billboard Songs, Lyrics, Spotify Features, and Sentiment Analysis
+ * [depression-data.csv](https://github.com/jeeminhan/MuSentiment/blob/main/depression_data.csv) - 
+ * [drug_datacsv.csv](https://github.com/jeeminhan/MuSentiment/blob/main/drug_datacsv.csv) - 
+ * [Lyrics](https://github.com/jeeminhan/MuSentiment/tree/main/Lyrics) - Lyrics collected into individual textfiles for each song
 
 ## Analysis
 The main idea of the project was to see if popular songs and their possible message would affect the general population's mental health. The average depression rate was compared to the average positive and negative sentiment rating on top songs.
