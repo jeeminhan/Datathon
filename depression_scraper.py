@@ -25,16 +25,21 @@ def yearly(link,year):
   for answer in actual_table:
     responses = answer.find('table', attrs = {'class':'values'})
     try:
-      fourth = responses.find("tbody").find_all("tr")[3]
+      half = responses.find("tbody").find_all("tr")[1].find_all("td", attrs={"class":"values"})[2].text
+      somewhat = responses.find("tbody").find_all("tr")[2].find_all("td", attrs={"class":"values"})[2].text
+      all_days = responses.find("tbody").find_all("tr")[3].find_all("td", attrs={"class":"values"})[2].text
       total = responses.find("tbody").find_all("tr")[6]
-      value = fourth.find_all("td", attrs={"class":"values"})[2].text
+      value = int(all_days) + int(half) + int(somewhat)
       total = total.find_all("td", attrs={"class":"values"})[3].text
       temp.append(int(value)/int(total))
     except:
       pass
   other_vals = temp[1:]
-  avg = sum(other_vals)/len(other_vals)
-  temp.append(avg)
+  try:
+    avg = sum(other_vals)/len(other_vals)
+    temp.append(avg)
+  except:
+    temp.append(0)
 
   return temp
 
