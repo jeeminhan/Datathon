@@ -46,20 +46,22 @@ A similar compairison was made with drug usage as well. However, there is not mu
 ### Regression Model
 
 With the data collected from the spotify API, we wanted to see if different factors (such as tempo, energy, key) would also have a direct relationship with negative sentiment. A regression model was created. The model was split 0.67-0.33 training/testing and had a root mean squared error of 0.0036. The result of the prediction is shown below
+
 ![image](https://user-images.githubusercontent.com/72060730/137621145-caa1177c-6bfb-499c-a4c6-10d11f3575e2.png)
 
 
 ### Word Clouds
-Here are some of the things that we learned through our data:
-Most commonly used words in the 25 most "negative" songs
+Most commonly used words in the 25 most "negative" songs are:
+
 ![image](https://user-images.githubusercontent.com/72060730/137620645-2f4d5d47-69a2-4393-846d-d131b3229c68.png)
 
-Most commonly used words in the 25 most "positive" songs
+
+Most commonly used words in the 25 most "positive" songs are"
 
 ![image](https://user-images.githubusercontent.com/72060730/137620654-21d91a86-58eb-47c6-9c09-586a0c747521.png)
 
 ### Yearly Trends
-Additionally, we were able to look at the trend of the percentage of positive, negative, and neutral tendneice sof songs per year.
+Additionally, we were able to look at the trend of the percentage of positive, negative, and neutral tendencies of songs per year.
 
 ![image](https://user-images.githubusercontent.com/72060730/137620684-f21e7832-9edf-418f-b4bb-26e41006f7b4.png)
 ![image](https://user-images.githubusercontent.com/72060730/137620690-7d447b37-8080-4c39-930f-a8df44fce3e7.png)
@@ -72,7 +74,7 @@ Additionally, we were able to look at the trend of the percentage of positive, n
 
 
 
-
+## Reflection
 
 
 #### Bonus star
