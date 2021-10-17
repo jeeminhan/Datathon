@@ -20,6 +20,26 @@ The same process was used to collect data on drug use in the United States.
 Data about songs was collected in multiple different places but eventually cleaned and aggregated together. The top 50 songs of the year was found from Billboard's top 100 list. Taking the artist and title of the song, the genius API was employed to return the lyrics for each song. This data was manipulated through NLTK's sentiment analysis to determine the positive, negative, neutral, and compound values. Finally, the Spotify Web API was used to determine more attributes of the top 50 songs of each year. 
 
 
+Depression vs Song
+
+![image](https://user-images.githubusercontent.com/72060730/137621202-66802374-b25f-4cb5-bf79-73cc67ec8ed0.png)
+
+
+
+Drug usage vs song
+
+![image](https://user-images.githubusercontent.com/72060730/137621126-f4fb3e47-a24e-4103-a145-af7d2585eafa.png)
+
+
+
+regression model
+
+![image](https://user-images.githubusercontent.com/72060730/137621145-caa1177c-6bfb-499c-a4c6-10d11f3575e2.png)
+
+0.0036093402003870485
+
+
+
 Here are some of the things that we learned through our data:
 Most commonly used words in the 25 most "negative" songs
 ![image](https://user-images.githubusercontent.com/72060730/137620645-2f4d5d47-69a2-4393-846d-d131b3229c68.png)
@@ -39,6 +59,8 @@ Additionally, we were able to look at the trend of the percentage of positive, n
 ![image](https://user-images.githubusercontent.com/72060730/137620698-838060e9-8197-4375-a42f-a7953c0c2c39.png)
 ![image](https://user-images.githubusercontent.com/72060730/137620700-a77db526-6ca0-4ce4-8c3e-421dc02c345c.png)
 ![image](https://user-images.githubusercontent.com/72060730/137620701-7519db31-36b6-45e6-9e51-e93754a37d93.png)
+
+
 
 
 
