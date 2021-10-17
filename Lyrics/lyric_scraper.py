@@ -29,6 +29,10 @@ def main():
     count = 0
 
     for index, row in songs_list.iterrows():
+        if count < 747:
+            count += 1
+            continue
+
         song_name = row[0]
         artist_name = row[1]
 
