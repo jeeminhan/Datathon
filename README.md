@@ -17,14 +17,20 @@ The first data we scraped was the depression dataset which came from the CDC (ht
 
 The same process was used to collect data on drug use in the United States. 
 
-Data about songs was collected in multiple different places but eventually cleaned and aggregated together. The top 50 songs of the year was found from Billboard's top 100 list. Taking the artist and title of the song, the genius API was employed to return the lyrics for each song. This data was manipulated through NLTK's sentiment analysis to determine the positive, negative, neutral, and compound values. Finally, the Spotify Web API was used to determine more attributes of the top 50 songs of each year. 
+Data about songs was collected in multiple different places but eventually cleaned and aggregated together. The top 50 songs of the year was found from Billboard's top 100 list. Taking the artist and title of the song, the genius API was employed to return the lyrics for each song. This data was manipulated through NLTK's sentiment analysis to determine the positive, negative, neutral, and compound values. Finally, the Spotify Web API was used to determine more attributes of the top songs of each year. 
 
+The main idea of the project was to see if popular song's and their possible message would affect the general population's mental health. The average depression rate was compared to the average positive and negative sentiment rating on top songs.
 
 Depression vs Song
 
 ![image](https://user-images.githubusercontent.com/72060730/137621202-66802374-b25f-4cb5-bf79-73cc67ec8ed0.png)
 
+Although, nothing is conclusive, there may be some correation between depression and positive songs. One hypothesis our group establised was that as people were stuggling more with their mental health (2008), they turned to happier music which raised the overall score (as seen in 2010). 
 
+
+
+
+A similar compairison was made with drug usage as well. However, there is not much correlation found between drug usage and song sentiment. 
 
 Drug usage vs song
 
@@ -32,11 +38,10 @@ Drug usage vs song
 
 
 
-regression model
+With the data collected from the spotify API, we wanted to see if different factors (such as tempo, energy, key) would also have a direct relationship with negative sentiment. A regression model was created. The model was split 0.67-0.33 training/testing and had a root mean squared error of 0.0036. The result of the prediction is shown below
+
 
 ![image](https://user-images.githubusercontent.com/72060730/137621145-caa1177c-6bfb-499c-a4c6-10d11f3575e2.png)
-
-0.0036093402003870485
 
 
 
