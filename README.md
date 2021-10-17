@@ -1,16 +1,6 @@
 # Datathon
 ## Texas A&amp;M Datathon Repository
 
-Write-Up:#
-Process
-Describes team's approach to problem.
-Includes
-Visualization Interpretability
-Explains what it means/portrays.
-Reflection (optional)
-What gave your team the most problems during this challenge?
-What would your team do differently if you were given more than 24 hours?
-
 
 ## Our approach
 Our approach to the problem was multi-faceted. When we first started our problem we tried to approach things in a top-down fashion, by having some idea of what the data would look like and creating our models based on that. We realized as we kept going that a lot of what we had in mind wasn't working out. We expected to find certain things in the data but it was hard for us to find those correlations in the data. That's why we turned to a more bottom-up approach where collecting data became our top priority.
@@ -88,6 +78,8 @@ The sporadic nature of the graphs made it hard to really analyze trends. This is
 
 
 ## Reflection
+
+There were a lot of challenges that we had to face, but we think one of the biggest ones was definitely analyzing the data that we scraped and trying to find the relationships or lack thereof between them. One of the things that made it hard to find relationships between the data was the fact that a lot of census data on depression and drug usage was collected every two years. That’s a lot of time between each of the points and so analyzing any relationships was not as accurate as we would like. There was not much we could do about this as we wanted to work with the CDC’s data and so had to make do with what we had. If we had more time we would have liked to look for more data and try to look through different relationships to see if there were any more important findings in the various datasets we created.
 
 
 #### Bonus star
