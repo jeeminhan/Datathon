@@ -12,3 +12,6 @@ What gave your team the most problems during this challenge?
 What would your team do differently if you were given more than 24 hours?
 
 Our appriach to the problem was multi-faceted. When we first started our problem we tried to approach things in a top down fashion, by having some idea of what the data would look like and creating our models based on thhat. We realized as we kept going that a lot of what we had in mind wasn't working out. We expected to find certain things in the data but it was hard for us to find those correlations in the data. That's why we turned to a more bottom-yp approached whre 
+
+
+![image](https://user-images.githubusercontent.com/72060730/137617413-6b4e9681-336a-4daa-9647-edc77a9fd44a.png)
